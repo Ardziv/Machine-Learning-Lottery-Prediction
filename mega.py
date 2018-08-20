@@ -13,7 +13,7 @@ from keras.layers import Dense, Dropout, Activation
 
 def ldata(m,t):
 
-    # load the data from all the games happened until 31/12/2017
+    # load the data from all the games happened between 3/1/2008 and 18/8/2018
     # m is the number of training examples ; t is the number of test examples
     # the output is extracting just the first number of the each game.
 
