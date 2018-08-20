@@ -32,21 +32,21 @@ def ldata(m,t):
     X_train[1][:] = jogo.values[3][:m-t]    # day of the game
     X_train[2][:] = jogo.values[4][0:m-t]   # month of the game
     X_train[3][:] = jogo.values[5][0:m-t]   #year of the game
-    X_train = X_train.T;
+    X_train = X_train.T
 
     X_test[0][:] = jogo.values[0][m-t:m]
     X_test[1][:] = jogo.values[3][m-t:m]
     X_test[2][:] = jogo.values[4][m-t:m]
     X_test[3][:] = jogo.values[5][m-t:m]
-    X_test = X_test.T;
+    X_test = X_test.T
     
     Y_train = jogo.values[7][0:m-t];    #the number of the first ball of the game
-    Y_train = Y_train.T;
+    Y_train = Y_train.T
     Y_train = Y_train.astype(int)
     Y_train = keras.utils.to_categorical(Y_train, num_classes=61)   #turn it into on hot vector
 
-    Y_test = jogo.values[7][m-t:m];
-    Y_test = Y_test.T;
+    Y_test = jogo.values[7][m-t:m]
+    Y_test = Y_test.T
     Y_test = Y_test.astype(int)
     Y_test = keras.utils.to_categorical(Y_test, num_classes=61)
                 
@@ -66,7 +66,7 @@ def modelo(m, t, epoc, bat, v):
 
     #testing the model, I run: m1, l1, c1, y1 = modelo(1900, 10, 10, 32,2);
 
-    dados = ldata(m, t);
+    dados = ldata(m, t)
 
     i_shape = dados["X_train"].shape[1] #input shape
     o_shape = dados["Y_train"].shape[1] #output shape
