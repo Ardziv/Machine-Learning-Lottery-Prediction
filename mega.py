@@ -40,7 +40,7 @@ def ldata(m,t):
     X_test[3][:] = jogo.values[5][m-t:m]
     X_test = X_test.T
     
-    Y_train = jogo.values[7][0:m-t];    #the number of the first ball of the game
+    Y_train = jogo.values[7][0:m-t]   #the number of the first ball of the game
     Y_train = Y_train.T
     Y_train = Y_train.astype(int)
     Y_train = keras.utils.to_categorical(Y_train, num_classes=61)   #turn it into on hot vector
