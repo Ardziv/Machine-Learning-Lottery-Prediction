@@ -6,7 +6,7 @@ import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation
 
-    # for each game (draw), we have 60 balls numbered from 1 to 60 inside a bowl. Then, 6 of them are chosen and the result is shown. eg: 14-31-32-05-59-41
+    # for each game (draw), we have 49 balls numbered from 1 to 49 inside a bowl. Then, 6 of them are chosen and the result is shown. eg: 14-31-32-05-59-41
     # for this purpose, we will try to predict just the first number
 
 # functions
@@ -18,15 +18,15 @@ def ldata(m,t):
     # the output is extracting just the first number of the each game.
 
     
-    Location = r'datasets\jogo.xlsx'
+    Location = r'datasets\jogo-m6.xlsx'
     jogo = pd.read_excel(Location)
 
     dataset = {}
 
     X_train = np.zeros((4,m-t))
-    Y_train = np.zeros((60,m-t))
+    Y_train = np.zeros((49,m-t))
     X_test = np.zeros((4,t))
-    Y_test = np.zeros((60,t))
+    Y_test = np.zeros((49,t))
  
     X_train[0][:] = jogo.values[0][0:m-t]   #number of the game
     X_train[1][:] = jogo.values[3][:m-t]    # day of the game
