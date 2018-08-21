@@ -102,15 +102,15 @@ def modelo(m, t, epoc, bat, v):
 def main():
      print "Testing the Model: m1, l1, c1, y1 = modelo(1000, 10, 10, 32,1);"
      m1, l1, c1, y1 = modelo(1600, 10, 10, 32,1)
-     print "m1:"+m1+"l1:"l1+"c1:"+c1+"y1:"+y1
+     print "m1:"+m1+"l1:"+l1+"c1:"+c1+"y1:"+y1
 
      print "Testing the Model: m2, l2, c2, y2 = modelo(1600, 10, 10, 32,1);"
      m2, l2, c2, y2 = modelo(1600, 10, 10, 32,1)
-     print "m2:"+m2+"l2:"l2+"c2:"+c2+"y2:"+y2
+     print "m2:"+m2+"l2:"+l2+"c2:"+c2+"y2:"+y2
 
      print "Testing the Model: m3, l3, c3, y3 = modelo(1600, 20, 20, 32,2);"
      m3, l3, c3, y3 = modelo(1600, 20, 20, 32,2)
-     print "m3:"+m3+"l3:"l3+"c3:"+c3+"y3:"+y3
+     print "m3:"+m3+"l3:"+l3+"c3:"+c3+"y3:"+y3
 
 
 if __name__ == "__main__":
